@@ -4,7 +4,6 @@ https://atcoder.jp/contests/abc213/tasks/abc213_c
 3 2
 2 5
 """
-import numpy as np
 
 _, _, n = input().split()
 x_list = []
@@ -15,10 +14,17 @@ for i in range(int(n)):
     y_list.append(y)
 x_unique_ordered = list(set(x_list))
 x_unique_ordered.sort()
+
+
 y_unique_ordered = list(set(y_list))
 y_unique_ordered.sort()
 
-for x, y in zip(x_list,y_list):
-    print(x_unique_ordered.index(x) + 1, y_unique_ordered.index(y) + 1)
+x_dict = {}
+for i, x in enumerate(x_unique_ordered):
+    x_dict[x] = i + 1
+y_dict = {}
+for i, y in enumerate(y_unique_ordered):
+    y_dict[y] = i + 1
 
-
+for x, y in zip(x_list, y_list):
+    print(x_dict[x], y_dict[y])
