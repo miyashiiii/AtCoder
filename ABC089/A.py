@@ -6,6 +6,7 @@ https://atcoder.jp/contests/abs/tasks/arc089_a
 3 1 2
 6 1 1
 """
+
 n = int(input())
 
 before_t, before_x, before_y = 0, 0, 0
